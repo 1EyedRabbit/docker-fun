@@ -15,3 +15,6 @@ steps:
 
 images:
   - 'us-central1-docker.pkg.dev/cts01-pratikkamble/docker-fun/flask-color-change:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
