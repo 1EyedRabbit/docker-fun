@@ -57,3 +57,10 @@ Your experiment is now exposed on http://localhost:8080
 - Flask App: The app.py file serves a simple web page using Flask. It uses Jinja templating to inject the port and random background color into the HTML.
 - Random Background Color: The app generates a random hex color on each page refresh using Python's random module.
 - Docker: The Dockerfile containerizes the Flask app. When the container is run, it listens on port 8080 by default.
+
+### Cloud Build Workflow
+
+- Trigger: Automatically triggered on main branch push.
+- Build: Docker image is built using the repository’s Dockerfile.
+- Push: Image is pushed to Artifact Registry.
+- Deploy (Optional): Automatically deployed to Cloud Run using the latest image.
